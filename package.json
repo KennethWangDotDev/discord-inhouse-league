@@ -1,0 +1,25 @@
+{
+    "name": "br-ihl",
+    "version": "0.0.1",
+    "main": "./lib/index.js",
+    "dependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-preset-es2015": "^6.24.1",
+        "dedent-js": "^1.0.1",
+        "discord.js": "^11.0.0"
+    },
+    "scripts": {
+        "bot": "./node_modules/babel-cli/bin/babel-node.js --presets es2015 ./lib/index.js"
+    },
+    "license": "MIT",
+    "repository": "/br-ihl",
+    "devDependencies": {
+        "babel-eslint": "^7.2.3",
+        "eslint": "^4.14.0",
+        "eslint-config-airbnb": "^16.1.0",
+        "eslint-plugin-import": "^2.8.0",
+        "eslint-plugin-jsx-a11y": "^6.0.3",
+        "eslint-plugin-react": "^7.5.1",
+        "prettier": "^1.9.2"
+    }
+}

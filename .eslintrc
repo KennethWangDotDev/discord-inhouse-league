@@ -1,0 +1,25 @@
+{
+    "parser": "babel-eslint",
+    "extends": "airbnb",
+    "env": {
+        "node": true,
+        "es6": true
+    },
+    "rules": {
+        "indent": ["error", 4],
+        "no-console": 0,
+        "padded-blocks": 0,
+        "no-restricted-syntax": 0,
+        "max-len": 0,
+        "comma-dangle": ["error", "only-multiline"],
+        "no-trailing-spaces": ["error", { "skipBlankLines": true }],
+        "no-await-in-loop": 0,
+        "no-prototype-builtins": 0,
+        "no-param-reassign": 0,
+        "func-names": 0,
+        "no-underscore-dangle": 0,
+        "no-mixed-operators": 0,
+        "eol-last": 0,
+        "import/prefer-default-export": 0
+    }
+}
