@@ -1,0 +1,32 @@
+type Player @model {
+  id: ID! @isUnique
+  discordId: String! @isUnique
+  username: String! @isUnique
+  rating: Int
+  sigma: Float
+  ratingPro: Int @defaultValue(value: 2500)
+  sigmaPro: Float @defaultValue(value: 1.813)
+  pro: Boolean @defaultValue(value: false)
+  playerMatchRatingsChanges: [PlayerMatchRatingsChange!]! @relation(name: "PlayerMatchRatingsChangeOnPlayer")
+  matches: [Match!]! @relation(name: "PlayerOnMatch")
+  wonMatches: [Match!]! @relation(name: "PlayerOnWonMatch")
+  lostMatches: [Match!]! @relation(name: "PlayerOnLostMatch")
+}
+
+type Match @model {
+  id: ID! @isUnique
+  date: DateTime!
+  playerMatchRatingsChanges: [PlayerMatchRatingsChange!]! @relation(name: "PlayerMatchRatingsChangeOnMatch")
+  players: [Player!]! @relation(name: "PlayerOnMatch")
+  winners: [Player!]! @relation(name: "PlayerOnWonMatch")
+  losers: [Player!]! @relation(name: "PlayerOnLostMatch")
+  league: String
+}
+
+type PlayerMatchRatingsChange @model {
+  id: ID! @isUnique
+  ratingsChange: Int
+  sigmaChange: Float
+  match: Match @relation(name: "PlayerMatchRatingsChangeOnMatch")
+  player: Player @relation(name: "PlayerMatchRatingsChangeOnPlayer")
+}
