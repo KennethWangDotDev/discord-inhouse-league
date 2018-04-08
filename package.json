@@ -1,6 +1,6 @@
 {
     "name": "br-ihl",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "main": "./lib/index.js",
     "dependencies": {
         "babel-cli": "^6.26.0",
@@ -21,6 +21,7 @@
         "babel-eslint": "^7.2.3",
         "eslint": "^4.14.0",
         "eslint-config-airbnb": "^16.1.0",
+        "eslint-config-google": "^0.9.1",
         "eslint-plugin-import": "^2.8.0",
         "eslint-plugin-jsx-a11y": "^6.0.3",
         "eslint-plugin-react": "^7.5.1",
